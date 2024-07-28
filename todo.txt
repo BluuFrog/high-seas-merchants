@@ -1,0 +1,7 @@
+1. Make an item class
+2. Make an inventory class
+3. Implement trading between island and player
+4. Make an NPC trader class (very simple for now)
+5. Implement trading between the player, the NPC's, and the island
+6. Make an economy class (very simple for now)
+7. Implement economy influencing trade, price changes, supply and demand, etc...
