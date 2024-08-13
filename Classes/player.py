@@ -2,7 +2,9 @@
 The class representing all info and actions done directly by the player
 """
 
+
 class Player:
+
     def __init__(self, name, coins, storageCap, inventory, x, y):
         self.name = name
         self.coins = coins

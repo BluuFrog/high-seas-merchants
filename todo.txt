@@ -1,4 +1,4 @@
-1. Make an inventory class
+1. Make item carry its amount
 2. Implement trading between island and player
 3. Make an NPC trader class (very simple for now)
 4. Implement trading between the player, the NPC's, and the island

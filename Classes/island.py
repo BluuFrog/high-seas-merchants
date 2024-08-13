@@ -2,6 +2,7 @@
 The class representing each island in the game
 """
 
+
 class Island:
     def __init__(self, name, coins, storageCap, inventory, x, y):
         self.name = name
