@@ -3,9 +3,10 @@ The Class representing each item in the game
 """
 
 class Item:
-    def __init__(self, name, value, itemType, itemOrigin, ID):
+    def __init__(self, name, value, amount, itemType, itemOrigin, ID):
         self.name = name
         self.value = value
+        self.amount = amount
         self.itemType = itemType
         self.itemOrigin = itemOrigin
         self.ID = ID
