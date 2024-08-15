@@ -1,7 +1,6 @@
-1. Make a set of 20 initial items and 4 initial islands, and a setup class and functions to populate the game with them on start
-2. Pass this list to each new inventory made, just set base amount to 0 and then add whenever items are gained
-3. Implement trading between island and player, add remove function
-2. Make an NPC trader class (very simple for now)
-3. Implement trading between the player, the NPC's, and the island
-4. Make an economy class (very simple for now)
-5. Implement economy influencing trade, price changes, supply and demand, etc...
+1. Pass this list to each new inventory made, just set base amount to 0 and then add whenever items are gained
+2. Implement trading between island and player, add remove function
+3. Make an NPC trader class (very simple for now)
+4. Implement trading between the player, the NPC's, and the island
+5. Make an economy class (very simple for now)
+6. Implement economy influencing trade, price changes, supply and demand, etc...
