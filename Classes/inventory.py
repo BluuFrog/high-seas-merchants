@@ -3,20 +3,19 @@ The Class representing an entities inventory
 """
 
 class Inventory:
-
     def __init__(self, isPlayer, itemList):
         self.isPlayer = isPlayer
         self.itemList = itemList
 
-    # Adds item to list if not there yet, just adds more to amount if already there
+    # Adds to the amount attribute of an item
     def addItem(self, item, amount):
-        if self.itemList[item.ID] == -1:
-            self.itemList[item.ID] = item
-            self.itemList[item.ID].amount = amount
-        else:
-            self.itemList[item.ID].amount += amount
+        self.itemList[item.ID].amount += amount
 
-    # Shows all items in list that is greater than 0, will be changed that way on thursday likely
+    # Subtracts from the amount attribute of an item
+    def removeItem(self, item, amount):
+        self.itemList[item.ID].amount -= amount
+
+    # Shows all items in list that have amounts greater than 0
     def showItems(self):
         for index in range(0, 20):
             if self.itemList[index].amount > 0:
