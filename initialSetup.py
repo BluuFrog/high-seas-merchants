@@ -4,6 +4,7 @@ The class that creates the global island and item list
 from Classes.item import Item
 from Classes.island import Island
 
+
 class InitialSetup:
     def __init__(self, gameType):
         self.gameType = gameType
@@ -43,3 +44,10 @@ class InitialSetup:
             globalIslandList.append(Island('Crawford', 120000, 9000000.00, None, 53, 27))
             globalIslandList.append(Island('Kashwana', 200000, 1000000.00, None, 64, 74))
         return globalIslandList
+
+    # Prints out the opening text of the game
+    def openingText(self):
+        print(
+            "Welcome to high sea merchants! A game of risk and reward, of supply and demand.\nDo you have what it takes "
+            "to make a fortune out on the high seas? Do you have\nwhat it takes to become the best merchant in the world? Find out now!\n")
+
