@@ -6,6 +6,7 @@ The main file the game runs from
 import pygame
 from Classes.player import Player
 from Classes.inventory import Inventory
+from Classes.playerBoat import PlayerBoat
 from Python_Projects.Learning.Learning_Projects.Large_Projects.HighSeasMerchants.initialSetup import InitialSetup
 
 
@@ -22,7 +23,7 @@ pygame.init() # Initial setup
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 clock = pygame.time.Clock()
 running = True
-titleScreen = True
+inTitle = True
 
 pygame.display.set_caption("High Seas Merchants") # Window name and icon
 icon = pygame.image.load('Assets/IconHSM.png')
@@ -35,17 +36,21 @@ text = font.render("Press any key to continue", True, pygame.Color((115, 62, 57)
 pygame.Surface.blit(screen, titleScreen, (500, 125))
 pygame.Surface.blit(screen, text, (570, 600))
 
+pBoat = PlayerBoat()
+pGroup = pygame.sprite.Group()
+pGroup.add(pBoat)
+
 
 while running: # Game loop
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-        if titleScreen: # Code to make title screen disappear when a key is pressed
+        if inTitle: # Code to make title screen disappear when a key is pressed
             if event.type == pygame.KEYDOWN:
                 screen.fill(color=(153, 204, 255))
-                titleScreen = False
-
+                inTitle = False
+                pygame.sprite.Group.draw(pGroup, screen)
 
     pygame.display.flip()
     clock.tick(60)
@@ -53,10 +58,10 @@ while running: # Game loop
 pygame.quit()
 
 # Testing Below
-player.inventory.addItem(globalItemList[2], 5)
-player.inventory.addItem(globalItemList[8], 7)
-player.inventory.addItem(globalItemList[17], 3)
-player.inventory.removeItem(globalItemList[8], 5)
-player.trade(globalItemList[4], 7, globalItemList[2], 4, 200)
-player.inventory.showItems()
+#player.inventory.addItem(globalItemList[2], 5)
+#player.inventory.addItem(globalItemList[8], 7)
+#player.inventory.addItem(globalItemList[17], 3)
+#player.inventory.removeItem(globalItemList[8], 5)
+#player.trade(globalItemList[4], 7, globalItemList[2], 4, 200)
+#player.inventory.showItems()
 
