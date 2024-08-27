@@ -52,6 +52,13 @@ while running: # Game loop
                 inTitle = False
                 pygame.sprite.Group.draw(pGroup, screen)
 
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_s]:
+            pBoat.rect.y += 10
+            #pGroup.clear(screen, screen)
+            pygame.sprite.Group.draw(pGroup, screen)
+
+
     pygame.display.flip()
     clock.tick(60)
 
